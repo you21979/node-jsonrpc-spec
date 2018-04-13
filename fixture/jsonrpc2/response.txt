@@ -1,0 +1,6 @@
+{"jsonrpc": "2.0", "result": 19, "id": 1}
+{"jsonrpc": "2.0", "result": -19, "id": 2}
+{"jsonrpc": "2.0", "result": 19, "id": 3}
+{"jsonrpc": "2.0", "result": 19, "id": 4}
+{"jsonrpc": "2.0", "result": [ { "balance": "0.1", "name": "mona" }, { "balance": "0.00000001", "name": "btc" }], "id": 5}
+{"jsonrpc": "2.0", "result": { "status": 1 }, "id": 6}

@@ -14,16 +14,16 @@ export interface IBaseRequest extends IBase{
 }
 
 export interface IBaseResponse extends IBase{
-    id: number
+    id: number| string | null
 }
 
 export interface IRequest<T> extends IBaseRequest{
-    id: number
+    id: number | string | null
     params?: T
 }
 
 export interface IRequestWithParams<T> extends IBaseRequest{
-    id: number
+    id: number | string | null
     params: T
 }
 

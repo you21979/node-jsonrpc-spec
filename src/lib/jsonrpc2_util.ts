@@ -20,24 +20,18 @@ export const autoDetect = (obj: any): JSON_TYPE => {
     if(obj['jsonrpc'] !== '2.0'){
         return JSON_TYPE.UNKNOWN
     }
-    if('result' in obj){
-        if(typeof obj['id'] === 'number'){
+    if( 'id' in obj ){
+        if('result' in obj){
             return JSON_TYPE.RESPONSE
         }
-        return JSON_TYPE.UNKNOWN
-    }
-    if(typeof obj['error'] === 'object'){
-        if(typeof obj['id'] === 'number'){
+        if('error' in obj){
             return JSON_TYPE.RESPONSE_ERROR
         }
-        return JSON_TYPE.UNKNOWN
-    }
-    if(typeof obj['method'] === 'string'){
-        if(typeof obj['id'] === 'number'){
+        if(typeof obj['method'] === 'string'){
             return JSON_TYPE.REQUEST
-        }else{
-            return JSON_TYPE.NOTIFICATION
         }
+    }else if(typeof obj['method'] === 'string'){
+        return JSON_TYPE.NOTIFICATION
     }
     return JSON_TYPE.UNKNOWN
 }
