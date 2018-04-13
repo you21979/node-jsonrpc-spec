@@ -9,7 +9,7 @@ export interface IError{
     message: string
 }
 
-export interface IBaseRequest<T> extends IBase{
+export interface IBaseRequest extends IBase{
     method: string
 }
 
@@ -17,21 +17,21 @@ export interface IBaseResponse extends IBase{
     id: number
 }
 
-export interface IRequest<T> extends IBaseRequest<T>{
+export interface IRequest<T> extends IBaseRequest{
     id: number
     params?: T
 }
 
-export interface IRequestWithParams<T> extends IBaseRequest<T>{
+export interface IRequestWithParams<T> extends IBaseRequest{
     id: number
     params: T
 }
 
-export interface INotification<T> extends IBaseRequest<T>{
+export interface INotification<T> extends IBaseRequest{
     params?: T
 }
 
-export interface INotificationWithParams<T> extends IBaseRequest<T>{
+export interface INotificationWithParams<T> extends IBaseRequest{
     params: T
 }
 
@@ -42,6 +42,8 @@ export interface IResponse<T> extends IBaseResponse{
 export interface IResponseError extends IBaseResponse{
     error: IError
 }
+
+export type BatchStorage = Array<IBaseRequest | IBaseResponse>
 
 export enum ERROR_REASON{
     USER_DEFINE,
