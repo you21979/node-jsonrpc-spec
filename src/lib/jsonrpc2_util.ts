@@ -28,7 +28,11 @@ export const autoDetect = (obj: any): JSON_TYPE => {
             return JSON_TYPE.RESPONSE_ERROR
         }
         if(typeof obj['method'] === 'string'){
-            return JSON_TYPE.REQUEST
+            if(obj['id']){
+                return JSON_TYPE.REQUEST
+            }else{
+                return JSON_TYPE.NOTIFICATION
+            }
         }
     }else if(typeof obj['method'] === 'string'){
         return JSON_TYPE.NOTIFICATION
