@@ -22,6 +22,7 @@ describe('spec test', () => {
     const datadir = 'fixture/jsonrpc2'
     const data_request = fs.readFileSync(datadir + '/request.txt', 'utf8').split('\n').filter(v => v !== '')
     const data_response = fs.readFileSync(datadir + '/response.txt', 'utf8').split('\n').filter(v => v !== '')
+    const data_response_error = fs.readFileSync(datadir + '/response_error.txt', 'utf8').split('\n').filter(v => v !== '')
     const data_notification = fs.readFileSync(datadir + '/notification.txt', 'utf8').split('\n').filter(v => v !== '')
 
     it('request', () => {
@@ -39,5 +40,9 @@ describe('spec test', () => {
             assert(autoDetect(JSON.parse(line)) === rpctype.JSON_TYPE.NOTIFICATION)
         })
     })
-
+    it('response_error', () => {
+        data_response_error.forEach( line => {
+            assert(autoDetect(JSON.parse(line)) === rpctype.JSON_TYPE.RESPONSE_ERROR)
+        })
+    })
 })

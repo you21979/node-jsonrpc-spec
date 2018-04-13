@@ -4,3 +4,4 @@
 {"jsonrpc": "2.0", "method": "subtract", "params": {"minuend": 42, "subtrahend": 23}, "id": 4}
 {"jsonrpc": "2.0", "method": "foobar", "id": "1"}
 {"jsonrpc": "2.0", "method": "sum", "params": [1,2,4], "id": "1"}
+{"jsonrpc": "2.0", "method": "sum", "params": [1,2,4], "id": null}
