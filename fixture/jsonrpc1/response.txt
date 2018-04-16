@@ -1,0 +1,8 @@
+{"result": 19, "error": null, "id": 1}
+{"result": -19, "error": null, "id": 2}
+{"result": 19, "error": null, "id": 3}
+{"result": 19, "error": null, "id": 4}
+{"result": [ { "balance": "0.1", "name": "mona" }, { "balance": "0.00000001", "name": "btc" }], "error": null, "id": 5}
+{"result": { "status": 1 }, "error": null, "id": 6}
+{"result": { "status": 1 }, "error": null, "id": "6"}
+{"result": { "status": 1 }, "error": null, "id": null}

@@ -1,0 +1,3 @@
+{"error": { "code": -1000, "message": "test" }, "result": null, "id": 1}
+{"error": { "code": -1000, "message": "test" }, "result": null, "id": null}
+{"error": { "code": -1000, "message": "test" }, "result": null, "id": "2"}
