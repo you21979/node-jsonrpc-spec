@@ -4,8 +4,7 @@ import * as batch2 from './lib/jsonrpc2_batch'
 import * as util1 from './lib/jsonrpc1_util'
 import * as type1 from './lib/jsonrpc1_type'
 export {
-    util2,
-    type2,
-    batch2,
+    util1, type1,
+    util2, type2, batch2,
 }
 

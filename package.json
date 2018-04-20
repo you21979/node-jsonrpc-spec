@@ -1,6 +1,6 @@
 {
   "name": "jsonrpc-spec",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "jsonrpc-spec",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
